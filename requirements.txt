@@ -1,0 +1,3 @@
+gmail-utils @ git+https://github.com/samielzaret7/gmail-utils.git
+weasyprint
+python-dotenv

@@ -1,0 +1,24 @@
+# Conda environment
+.conda/
+
+# Runtime logs
+logs/
+
+# OAuth credentials (user-specific)
+credentials.json
+token.json
+
+# Environment variables
+.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Notebooks (scratch — main code is in .py)
+*.ipynb
+.ipynb_checkpoints/
+
+# macOS
+.DS_Store
