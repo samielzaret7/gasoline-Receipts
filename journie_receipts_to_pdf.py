@@ -18,8 +18,15 @@ from datetime import date
 from typing import List, Dict
 
 from dotenv import load_dotenv
-from weasyprint import HTML
 from email.utils import parsedate_to_datetime
+
+try:
+    from weasyprint import HTML
+except OSError as exc:  # Pango/cairo/GLib are missing — pip cannot install these
+    raise SystemExit(
+        f"WeasyPrint could not load its native libraries ({exc}).\n"
+        "Fix it by running ./setup.sh, or directly with: brew install pango"
+    ) from exc
 
 from gmail_utils import get_email_items_main
 

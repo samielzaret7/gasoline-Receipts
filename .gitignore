@@ -1,4 +1,5 @@
-# Conda environment
+# Virtual environments
+.venv/
 .conda/
 
 # Runtime logs

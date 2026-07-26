@@ -1,3 +1,11 @@
+# Native prerequisite: `brew install pango`
+#
+# WeasyPrint loads the Pango / cairo / GLib C libraries at import time. They are
+# not Python packages, so pip can never install them — without them the script
+# dies with "OSError: cannot load library 'libgobject-2.0-0'".
+#
+# `./setup.sh` installs those libraries and these packages in one step.
+
 gmail-utils @ git+https://github.com/samielzaret7/gmail-utils.git
 weasyprint
 python-dotenv
